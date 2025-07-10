@@ -1,0 +1,86 @@
+/* --- Reset và các biến --- */
+:root {
+    --board-size: 20; /* BẠN CÓ THỂ THAY ĐỔI SỐ NÀY (VD: 40) */
+    --cell-size: 30px; /* Kích thước mỗi ô */
+    --board-dimension: calc(var(--board-size) * var(--cell-size));
+}
+
+* {
+    color: white;
+    font-family: sans-serif;
+    transition: 0.2s ease-in-out;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+/* ... Giữ lại các style cho menu, turn-container, nút bấm ... */
+/* ... Bạn có thể copy-paste từ file cũ ... */
+
+body {
+    background-color: #252A34;
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.info-panel {
+    width: 200px;
+    text-align: center;
+}
+
+.main-grid {
+    display: grid;
+    /* Grid sẽ được set bằng JS */
+    width: var(--board-dimension);
+    height: var(--board-dimension);
+    background-color: #1d2128;
+    border: 2px solid #fff;
+}
+
+.box {
+    cursor: pointer;
+    font-size: calc(var(--cell-size) * 0.7); /* Kích thước chữ tự động */
+    font-weight: 700;
+    border: 1px solid #444; /* Đường kẻ mờ hơn */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    background-color: #FF2E63;
+}
+
+.winning-cell {
+    background-color: #08D9D6 !important;
+    color: #000 !important;
+}
+
+.board-locked {
+    pointer-events: none;
+}
+
+/* Các style còn lại cho .hide, .menu, .turn-container, #play-again... */
+/* Bạn có thể giữ nguyên từ phiên bản trước */
+.hide { display: none; }
+.menu, .pvc-options { text-align: center; }
+.menu h2 { margin-bottom: 20px; }
+.mode-btn { background-color: #FF2E63; color: white; border: none; padding: 15px 30px; font-size: 1.1rem; border-radius: 5px; cursor: pointer; margin: 5px; }
+.mode-btn:hover { background-color: #08D9D6; color: #000; }
+.turn-container { width: 170px; height: 80px; margin: auto; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; position: relative; }
+.turn-container h3 { margin: 0; grid-column-start: 1; grid-column-end: 3; }
+.turn-container .turn-box { border: 3px solid white; font-size: 1.6rem; font-weight: 700; display: flex; justify-content: center; align-items: center; }
+.turn-container .turn-box:nth-child(even) { border-right: none; }
+.bg { position: absolute; bottom: 0; left: 0; width: 85px; height: 40px; background-color: #FF2E63; z-index: -1; }
+#play-again { background-color: #FF2E63; padding: 10px 25px; border: none; font-size: 1.2rem; border-radius: 5px; cursor: pointer; display: none; margin-top: 20px; }
+#play-again:hover { padding: 10px 40px; background-color: #08D9D6; color: #000; }

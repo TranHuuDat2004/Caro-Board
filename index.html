@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gomoku (Caro)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Màn hình chọn chế độ chơi (giữ nguyên) -->
+    <div class="menu">
+        <h2>Choose Your Game Mode</h2>
+        <button class="mode-btn" id="pvp-btn">Player vs Player</button>
+        <div class="pvc-options">
+            <h3>Player vs Computer</h3>
+            <button class="mode-btn" id="pvc-x-btn">Play as X</button>
+            <button class="mode-btn" id="pvc-o-btn">Play as O</button>
+        </div>
+    </div>
+
+    <!-- Màn hình chơi game -->
+    <div class="game-container hide">
+        <div class="info-panel">
+            <div class="turn-container">
+                <h3>Turn For</h3>
+                <div class="turn-box align">X</div>
+                <div class="turn-box align">O</div>
+                <div class="bg"></div>
+            </div>
+            <h2 id="results"></h2>
+            <button id="play-again">Play Again</button>
+        </div>
+
+        <!-- Bàn cờ sẽ được tạo bởi JavaScript -->
+        <div class="board-container">
+            <div id="board" class="main-grid"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
