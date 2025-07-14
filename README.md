@@ -37,10 +37,8 @@ Bạn có thể xem demo trực tiếp của sản phẩm tại đây:
 
 ## Hình ảnh
 
-*Màn hình chọn chế độ chơi*
 ![Screenshot](screenshot/mode.png)
 
-*Giao diện ván đấu đang diễn ra*
 ![Screenshot](screenshot/play.png)
 
 
@@ -149,10 +147,8 @@ You can try the live demo of the project here:
 
 ## Screenshots
 
-*Game Mode Selection Screen*
 ![Screenshot](screenshot/mode.png)
 
-*In-Game Interface*
 ![Screenshot](screenshot/play.png)
 
 
